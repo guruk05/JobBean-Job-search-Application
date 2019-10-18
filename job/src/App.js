@@ -9,11 +9,14 @@ const App = () => {
   const url = "https://nut-case.s3.amazonaws.com/jobs.json";
    
   const [jobs , setJobs] = useState([]);
+  console.log(jobs);
  
  const getData = async() =>{
   const jobData = await fetch(url);
   const data = await jobData.json();
-  console.log(data);
+  // console.log(data.data);
+  setJobs(data.data);
+
   // console.log(data.data[0].title);
 
 }
