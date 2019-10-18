@@ -12,6 +12,11 @@ const App = () => {
   const [jobs , setJobs] = useState([]);
   // console.log(jobs);
  
+  useEffect(() => {
+    getData();
+  }, []); 
+
+  
  const getData = async() =>{
   const jobData = await fetch(url);
   const data = await jobData.json();
