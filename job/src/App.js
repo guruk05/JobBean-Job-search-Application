@@ -16,12 +16,12 @@ const App = () => {
     getData();
   }, []); 
 
-  
+
  const getData = async() =>{
   const jobData = await fetch(url);
   const data = await jobData.json();
+  setJobs(data.data);
   console.log(data.data);
-  // setJobs(data.data);
 
   // console.log(data.data[0].title);
 
@@ -38,7 +38,7 @@ const App = () => {
         <input className = "search-Form" type ="text" name="searchJob"/>
         <button className = "submit-Button"> Submit </button>
       </form>
-      {Job.map(jobs => (
+      {jobs.map(jobData => (
         <Job />
       ))}
     </div>
