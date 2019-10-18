@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.search-Jobs {
+  min-height:10vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-Form{
+  width:50%;
+  /* border-style: solid;
+  border:black; */
+  padding:10px;
+}
+
+.submit-Button{
+  background-color: skyblue;
+ border:none;
+ padding:10px 20px
+
+}
+
+.App-link {
+  color: #09d3ac;
+}
