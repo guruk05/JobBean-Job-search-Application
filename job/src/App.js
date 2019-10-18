@@ -8,7 +8,7 @@ const App = () => {
   
   const url = "https://nut-case.s3.amazonaws.com/jobs.json";
    
-  // const [ , setJobs] = useState([]);
+  const [jobs , setJobs] = useState([]);
  
  const getData = async() =>{
   const jobData = await fetch(url);
