@@ -37,10 +37,10 @@ const App = () => {
         <input className = "search-Form" type ="text" name="searchJob"/>
         <button className = "submit-Button"> Submit </button>
       </form>
-      {/* {jobs.map(jobData => (
+      {jobs.map(jobData => (
         <Job tittle = {jobData.title} companyName = {jobData.companyname} location = {jobData.location} experience = {jobData.experience} skills = {jobData.skills} type = {jobData.type} endDate = {jobData.enddate} apply = {jobData.applylink} />
       
-      ))} */}
+      ))}
     </div>
   );
 }
