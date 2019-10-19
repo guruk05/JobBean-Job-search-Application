@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Job = ({title,}) =>{
+const Job = ({title, companyName,}) =>{
 
 
     return (
