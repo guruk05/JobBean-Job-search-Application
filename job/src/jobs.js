@@ -6,7 +6,7 @@ const Job = ({title, companyName, location, experience, skills, type, endDate, a
 
     return (
         <div>
-            <h2>title</h2>
+            <h2>{title}</h2>
             <h4>companyName</h4>
             <p>location</p>
             <p>experience</p>
