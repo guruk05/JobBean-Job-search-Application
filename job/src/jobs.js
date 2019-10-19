@@ -8,7 +8,7 @@ const Job = ({title, companyName, location, experience, skills, type, endDate, a
         <div>
             <h2>{title}</h2>
             <h4>{companyName}</h4>
-            <p>location</p>
+            <p>{location}</p>
             <p>experience</p>
             <p>skills</p>
             <p>type</p>
