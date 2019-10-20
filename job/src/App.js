@@ -38,7 +38,8 @@ const App = () => {
         <button className = "submit-Button"> Submit </button>
       </form>
       {jobs.map(jobData => (
-        <Job title = {jobData.title} 
+         <Job key = {jobData.title}
+              title = {jobData.title} 
               companyName = {jobData.companyname} 
               location = {jobData.location} 
               experience = {jobData.experience} 
