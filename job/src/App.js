@@ -10,12 +10,22 @@ const App = () => {
   const url = "https://nut-case.s3.amazonaws.com/jobs.json";
    
   const [jobs , setJobs] = useState([]);
+  const [filteredJobs , setFilteredJobs] = useState("");
+  const [filterResults , setFilteredResults] = useState('Bangalore');
   // console.log(jobs);
  
   useEffect(() => {
     getData();
-  }, []); 
+  }, [filterResults]); 
 
+  const getSearch = (e) => {
+    setFilteredJobs(e.target.value);
+  };
+
+  const submitFilter = (e) => {
+    e.preventDefault()
+    setFilteredResults(filteredJobs)
+  }
 
  const getData = async() =>{
   const jobData = await fetch(url);
@@ -34,7 +44,7 @@ const App = () => {
       </header>
       <p>Search Jobs Here</p>
       <form className = "search-Jobs">
-        <input className = "search-Form" type ="text" name="searchJob"/>
+        <input className = "search-Form" type ="text" name="searchJob" value={filteredJobs} onChange = {getSearch}/>
         <button className = "submit-Button"> Submit </button>
       </form>
       {jobs.map(jobData => (
