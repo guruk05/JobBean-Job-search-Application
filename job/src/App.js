@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import Job from './Jobs';
 import './App.css';
+import Pagination from "react-js-pagination";
+require("bootstrap/less/bootstrap.less");
 import { Button } from 'reactstrap';
 
 
@@ -12,17 +14,16 @@ const App = () => {
    
   const [jobs , setJobs] = useState([]);
   const [search , setSearch] = useState("");
-  const [filterJobs, setFilterJobs] = useState("");
  
   useEffect(() => {
     getData();
-  }, [filterJobs]); 
+  },[search]); 
 
  const getData = async() =>{
   const jobData = await fetch(url);
   const data = await jobData.json();
   setJobs(data.data);
-  console.log(data);
+  // console.log(data);
 }  
 
  const updateSearch = (e) => {
@@ -31,8 +32,7 @@ const App = () => {
 
  const getSearch = (e) => {
    e.preventDefault();
-   setFilterJobs(search);
-   let filteredJobs = jobs.filter(job => job.location === search );
+   let filteredJobs = jobs.filter(job => job.location === search || job.companyname === search );
    setJobs(filteredJobs);
  }; 
 
