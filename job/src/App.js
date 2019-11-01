@@ -11,6 +11,7 @@ const App = () => {
   const url = "https://nut-case.s3.amazonaws.com/jobs.json";
    
   const [jobs , setJobs] = useState([]);
+  const [search , setSearch] = useState("");
   
  
   useEffect(() => {
@@ -30,7 +31,7 @@ const App = () => {
       </header>
       <p>Search Jobs Here</p>
       <form className = "search-Jobs">
-        <input className = "search-Form" type ="text" name="searchJob"/>
+        <input className = "search-Form" type ="text" value = {search} onChange = {updateSearch} name="searchJob"/>
         <Button outline color="secondary">Search</Button>
       </form>
       {jobs.map(jobData => (
