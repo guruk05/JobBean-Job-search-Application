@@ -24,9 +24,14 @@ const App = () => {
   setJobs(data.data);
 }  
 
-updateSearch = (e) => {
+ updateSearch = (e) => {
   setSearch(e.target.value);
 }
+
+ getSearch = () => {
+  
+
+ } 
 
   return (
     <div className="App">
