@@ -16,7 +16,7 @@ const App = () => {
  
   useEffect(() => {
     getData();
-  }, [search]); 
+  }, [filterJobs]); 
 
  const getData = async() =>{
   const jobData = await fetch(url);
