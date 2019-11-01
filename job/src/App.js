@@ -40,7 +40,7 @@ const App = () => {
         Job Search
       </header>
       <p>Search Jobs Here</p>
-      <form className = "search-Jobs">
+      <form onSubmit = {getSearch} className = "search-Jobs">
         <input className = "search-Form" type ="text" value = {search} onChange = {updateSearch} name="searchJob"/>
         <Button outline color="secondary">Search</Button>
       </form>
