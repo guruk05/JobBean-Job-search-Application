@@ -7,6 +7,9 @@ This is an job search app developed in order to allow users to find various jobs
 * JAVASCRIPT 
 * REACT
 
+# Author 
+
+
 
 
 
