@@ -24,6 +24,10 @@ const App = () => {
   setJobs(data.data);
 }  
 
+updateSearch = (e) => {
+  setSearch(e.target.value);
+}
+
   return (
     <div className="App">
       <header className="App-header">
