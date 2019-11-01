@@ -24,19 +24,17 @@
   align-items: center;
 }
 
-.search-Form{
-  width:50%;
-  /* border-style: solid;
-  border:black; */
-  padding:10px;
+input:focus {
+  outline:none;
+  border-color: black;
 }
 
-/* .submit-Button{
-  background-color: skyblue;
- border:none;
- padding:10px 20px
-
-} */
+.search-Form{
+  width:50%;
+  border-style: solid;
+  border-color:grey; 
+  padding:10px;
+}
 
 .App-link {
   color: #09d3ac;

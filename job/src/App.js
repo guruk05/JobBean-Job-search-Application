@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Job from './Jobs';
 import './App.css';
-import Pagination from "react-js-pagination";
-require("bootstrap/less/bootstrap.less");
 import { Button } from 'reactstrap';
 
 
