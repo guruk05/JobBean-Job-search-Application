@@ -29,8 +29,8 @@ const App = () => {
 }
 
  getSearch = () => {
-  
-
+   e.preventDefault();
+   
  } 
 
   return (
