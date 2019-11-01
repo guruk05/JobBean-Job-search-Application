@@ -12,7 +12,7 @@ const App = () => {
    
   const [jobs , setJobs] = useState([]);
   const [search , setSearch] = useState("");
-  const [filterJobs, setFilterJobs] = useState("")
+  const [filterJobs, setFilterJobs] = useState("");
  
   useEffect(() => {
     getData();
@@ -31,8 +31,9 @@ const App = () => {
 
  const getSearch = (e) => {
    e.preventDefault();
+   setFilterJobs(search);
    let filteredJobs = jobs.filter(job => job.location === search );
-   setJobs(filteredJobs)
+   setJobs(filteredJobs);
  }; 
 
   return (
