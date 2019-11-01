@@ -24,11 +24,11 @@ const App = () => {
   setJobs(data.data);
 }  
 
- updateSearch = (e) => {
+ const updateSearch = (e) => {
   setSearch(e.target.value);
 }
 
- getSearch = () => {
+ const getSearch = () => {
    e.preventDefault();
    let filteredJobs = jobs.filter(job => job.location === search );
    setJobs(filteredJobs);
