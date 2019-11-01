@@ -30,7 +30,7 @@ const App = () => {
 
  getSearch = () => {
    e.preventDefault();
-   
+   let filteredJobs = jobs.filter(job => job.location === search );
  } 
 
   return (
