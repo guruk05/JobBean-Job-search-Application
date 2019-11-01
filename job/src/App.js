@@ -12,16 +12,17 @@ const App = () => {
    
   const [jobs , setJobs] = useState([]);
   const [search , setSearch] = useState("");
-  
+  const [filterJobs, setFilterJobs] = useState("")
  
   useEffect(() => {
     getData();
-  }, []); 
+  }, [search]); 
 
  const getData = async() =>{
   const jobData = await fetch(url);
   const data = await jobData.json();
   setJobs(data.data);
+  console.log(data);
 }  
 
  const updateSearch = (e) => {
