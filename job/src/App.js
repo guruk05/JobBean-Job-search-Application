@@ -28,11 +28,11 @@ const App = () => {
   setSearch(e.target.value);
 }
 
- const getSearch = () => {
+ const getSearch = (e) => {
    e.preventDefault();
    let filteredJobs = jobs.filter(job => job.location === search );
-   setJobs(filteredJobs);
- } 
+   setJobs(filteredJobs)
+ }; 
 
   return (
     <div className="App">
