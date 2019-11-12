@@ -20,14 +20,14 @@ const App = () => {
   useEffect(() => {
     getData();
   },[search]); 
-
- const getData = async() =>{
-   setLoading(true);
-  const jobData = await fetch(url);
-  const data = await jobData.json();
-  setJobs(data.data);
+  
+  const getData = async() =>{
+    setLoading(true);
+    const jobData = await fetch(url);
+    const data = await jobData.json();
+    setJobs(data.data);
+    setLoading(false);
   console.log(data);
-  setLoading(false);
 }  
 
  const updateSearch = (e) => {
@@ -45,7 +45,14 @@ const App = () => {
     const indexOfFirstJob = indexOfLastJob - jobsPerPage;
     const currentJobs = jobs.slice(indexOfFirstJob,indexOfLastJob);
 
+    if(loading) { 
+      return( 
+       <div><h3> loading ... </h3></div>
+      )
+     };
+
   return (
+
     <div className="App">
       <header className="App-header">
         Job Search
