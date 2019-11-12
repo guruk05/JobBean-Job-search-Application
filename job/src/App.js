@@ -44,7 +44,7 @@ const App = () => {
       <div className = "searchContext"><h4>Search your dream jobs here</h4></div>
       <form onSubmit = {getSearch} className = "search-Jobs">
         <input className = "search-Form" type ="text" value = {search} onChange = {updateSearch} name="searchJob"/>
-        <Button variant = "outline-secondary" className = "searchButton" >Search</Button>
+        <Button onClick = {getSearch} variant = "outline-secondary" className = "searchButton" >Search</Button>
       </form>
       {jobs.map(jobData => (
          <Job key = {jobData.companyName}
