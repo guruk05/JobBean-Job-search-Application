@@ -43,7 +43,7 @@ const App = () => {
 
     const indexOfLastJob = currentPage * jobsPerPage;
     const indexOfFirstJob = indexOfLastJob - jobsPerPage;
-    
+    const currentJobs = jobs.slice(indexOfFirstJob,indexOfLastJob);
 
   return (
     <div className="App">
