@@ -17,6 +17,7 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [jobsPerPage] = useState(75);
   const [currentPage, setCurrentPage] = useState(1);
+  const [indexOfAllJobs, setIndexOfAllJobs] = useState("1709");
  
   useEffect(() => {
     getData();
@@ -39,7 +40,10 @@ const App = () => {
    e.preventDefault();
    let filteredJobs = jobs.filter(job => job.location === search || job.companyname === search );
    setJobs(filteredJobs);
-   console.log(filteredJobs);
+  //  console.log(filteredJobs);
+   let indexOfFilteredJobs = filteredJobs.length;
+  //  console.log(indexOfFilteredJobs); 
+   setIndexOfAllJobs(indexOfFilteredJobs);
  }; 
   
  const paginate = (pageNumber) => {
@@ -50,7 +54,7 @@ const App = () => {
     const indexOfLastJob = currentPage * jobsPerPage;
     const indexOfFirstJob = indexOfLastJob - jobsPerPage;
     const currentJobs = jobs.slice(indexOfFirstJob,indexOfLastJob);
-    const indexOfAllJobs = jobs.length;
+    // const indexOfAllJobs = jobs.length;
     console.log(indexOfAllJobs);
 
     if(loading) { 
@@ -80,7 +84,8 @@ const App = () => {
               skills = {jobData.skills} 
               type = {jobData.type} 
               endDate = {jobData.enddate} 
-              apply = {jobData.applylink} />  
+              apply = {jobData.applylink}
+              indexOfAllJobs = {indexOfAllJobs} />  
       ))}
       <Pagination className = "pagination" 
       jobsPerPage = {jobsPerPage} 
