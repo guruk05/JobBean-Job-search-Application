@@ -80,7 +80,8 @@ const App = () => {
               apply = {jobData.applylink} />  
       ))}
       <Pagination className = "pagination" jobsPerPage = {jobsPerPage} 
-    />
+    totalPosts ={jobs.length} 
+   />
     </div>
   );
 }
