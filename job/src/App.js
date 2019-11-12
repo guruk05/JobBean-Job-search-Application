@@ -15,6 +15,7 @@ const App = () => {
   const [search , setSearch] = useState("");
   const [loading, setLoading] = useState(false);
   const [jobsPerPage, setJobsPerPage] = useState([75]);
+  const [currentPage, setCurrentPage] = useState([1]);
  
   useEffect(() => {
     getData();
