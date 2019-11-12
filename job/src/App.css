@@ -33,14 +33,14 @@ input:focus {
   width:50%;
   height: -1%;
   align-content: center;
-  margin-left: 5%;
+  margin-left: 11%;
   border-style: solid;
   border-color:grey; 
   padding:10px;
 }
 
 .searchButton{
-  margin-left: 23px;
+  margin-left: 40px;
   width: 7%;
 }
 
@@ -56,6 +56,8 @@ input:focus {
   margin-top: 4em;
   width:70em;
   color:black;
+  border-style: ridge;
+  border-color: black;
 }
 
 

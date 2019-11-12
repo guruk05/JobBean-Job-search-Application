@@ -6,10 +6,11 @@ import { Button } from 'react-bootstrap';
 
 const Job = ({title, companyName, location, experience, skills, type, endDate, apply}) =>{
     return (
-        <Card className="text-left" border = "dark">
+        <Card className="text-left">
   <Card.Header><h4>{title}</h4></Card.Header>
   <Card.Body>
     <Card.Title>{companyName}</Card.Title>
+    {/* <hr></hr> */}
     <Card.Text>
       <p>{location}</p>
       <p>{experience}</p>
