@@ -41,6 +41,11 @@ const App = () => {
    setJobs(filteredJobs);
    console.log(filteredJobs);
  }; 
+  
+ const paginate = (pageNumber) => {
+  
+  // console.log(this.state.currentPage);
+}
 
     const indexOfLastJob = currentPage * jobsPerPage;
     const indexOfFirstJob = indexOfLastJob - jobsPerPage;
