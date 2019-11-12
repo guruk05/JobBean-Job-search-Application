@@ -15,8 +15,8 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-letter-spacing: 10px;
-font-size: 2em;
+  letter-spacing: 10px;
+  font-size: 2em;
 }
 
 .search-Jobs {
@@ -51,6 +51,11 @@ input:focus {
   margin-left: 40px;
   width: 7%;
   border-radius: 10px;
+}
+
+.indexOfJobs{
+  margin-top: 3em;
+  /* margin-left: 5em; */
 }
 
 .App-link {
