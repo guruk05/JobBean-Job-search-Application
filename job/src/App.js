@@ -81,7 +81,7 @@ const App = () => {
       ))}
       <Pagination className = "pagination" jobsPerPage = {jobsPerPage} 
     totalPosts ={jobs.length} 
-   />
+    paginate = {paginate} />
     </div>
   );
 }
