@@ -14,7 +14,8 @@ const App = () => {
    
   const [jobs , setJobs] = useState([]);
   const [search , setSearch] = useState("");
-  const [filterSearch, setFilterSearch] = useState("");
+  // const [filterSearch, setFilterSearch] = useState("");
+  const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
   const [jobsPerPage] = useState(75);
   const [currentPage, setCurrentPage] = useState(1);
@@ -22,9 +23,9 @@ const App = () => {
  
   useEffect(() => {
     getData();
-  },[filterSearch]); 
+  },[query]); 
   
-  const getData = async() =>{
+  const getData = async() => {
     setLoading(true);
     const jobData = await fetch(url);
     const data = await jobData.json();
@@ -34,29 +35,28 @@ const App = () => {
 }  
 
  const updateSearch = (e) => {
-  setSearch(e.target.value);    
+   setSearch(e.target.value);    
 }
 
- const getSearch = (e) => {
-   e.preventDefault();
-   let filteredJobs = jobs.filter(job => job.location === search || job.companyname === search );
-   setJobs(filteredJobs);
-   setFilterSearch(search);
-  //  console.log(filteredJobs);
-   let indexOfFilteredJobs = filteredJobs.length;
-  //  console.log(indexOfFilteredJobs); 
-   setIndexOfAllJobs(indexOfFilteredJobs);
+ const getSearch=(e) => {
+  // e.stopPropagation();
+  e.preventDefault();
+  setQuery(search);
+  // setFilterSearch(search);
+  console.log("Called");
+  let filteredJobs = jobs.filter(job => job.location === search || job.companyname === search );
+  setJobs(filteredJobs);
+  let indexOfFilteredJobs = filteredJobs.length; 
+  setIndexOfAllJobs(indexOfFilteredJobs);
  }; 
   
  const paginate = (pageNumber) => {
   setCurrentPage(pageNumber);
-  // console.log(this.state.currentPage);
 }
 
     const indexOfLastJob = currentPage * jobsPerPage;
     const indexOfFirstJob = indexOfLastJob - jobsPerPage;
     const currentJobs = jobs.slice(indexOfFirstJob,indexOfLastJob);
-    // const indexOfAllJobs = jobs.length;
     console.log(indexOfAllJobs);
 
     if(loading) { 
@@ -72,9 +72,9 @@ const App = () => {
         JobBean
       </header>
       <div className = "searchContext"><h4>Search your dream jobs here</h4></div>
-      <form onSubmit = {getSearch} className = "search-Jobs">
+      <form onSubmit={getSearch} className = "search-Jobs">
         <input className = "search-Form" type ="text" value = {search} onChange = {updateSearch} name="searchJob"/>
-        <Button onClick = {getSearch} variant = "outline-secondary" className = "searchButton" >Search</Button>
+        <Button variant = "outline-secondary" type="submit" className = "searchButton" >Search</Button>
       </form>
       <div className = "indexOfJobs"><h5>Total Jobs Found : {indexOfAllJobs}</h5></div>
       {currentJobs.map(jobData => (
