@@ -67,6 +67,11 @@ input:focus {
   /* border-color: black; */
 }
 
+.apply{
+  color:white;
+}
+
+
 .pagination{
   justify-content: center;
   margin-top: 5em;
