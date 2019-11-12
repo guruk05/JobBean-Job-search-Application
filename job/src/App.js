@@ -22,10 +22,12 @@ const App = () => {
   },[search]); 
 
  const getData = async() =>{
+   setLoading(true);
   const jobData = await fetch(url);
   const data = await jobData.json();
   setJobs(data.data);
   console.log(data);
+  setLoading(false);
 }  
 
  const updateSearch = (e) => {
