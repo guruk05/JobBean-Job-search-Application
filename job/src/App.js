@@ -50,6 +50,8 @@ const App = () => {
     const indexOfLastJob = currentPage * jobsPerPage;
     const indexOfFirstJob = indexOfLastJob - jobsPerPage;
     const currentJobs = jobs.slice(indexOfFirstJob,indexOfLastJob);
+    const indexOfAllJobs = jobs.length;
+    console.log(indexOfAllJobs);
 
     if(loading) { 
       return( 
@@ -68,6 +70,7 @@ const App = () => {
         <input className = "search-Form" type ="text" value = {search} onChange = {updateSearch} name="searchJob"/>
         <Button onClick = {getSearch} variant = "outline-secondary" className = "searchButton" >Search</Button>
       </form>
+      <div className = "indexOfJobs"><h5>Total Jobs Found : {indexOfAllJobs}</h5></div>
       {currentJobs.map(jobData => (
          <Job key = {jobData.companyName}
               title = {jobData.title} 
