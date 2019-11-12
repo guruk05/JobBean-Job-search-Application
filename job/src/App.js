@@ -43,7 +43,7 @@ const App = () => {
  }; 
   
  const paginate = (pageNumber) => {
-  
+  setCurrentPage(pageNumber);
   // console.log(this.state.currentPage);
 }
 
