@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Job from './Jobs';
+import pagination from './pagination';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
