@@ -14,7 +14,7 @@ const App = () => {
   const [jobs , setJobs] = useState([]);
   const [search , setSearch] = useState("");
   const [loading, setLoading] = useState(false);
-  
+  const [jobsPerPage, setJobsPerPage] = useState([75]);
  
   useEffect(() => {
     getData();
