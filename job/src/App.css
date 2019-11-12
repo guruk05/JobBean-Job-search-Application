@@ -15,6 +15,8 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+letter-spacing: 10px;
+font-size: 2em;
 }
 
 .search-Jobs {
@@ -24,7 +26,7 @@
   align-items: center;
 }
 
-.searchContext{
+.searchContext {
   margin-top:2em;
   margin-bottom: 2em;
 }
@@ -34,7 +36,7 @@ input:focus {
   border-color: black;
 }
 
-.search-Form{
+.search-Form {
   width:50%;
   height: -1%;
   align-content: center;
@@ -44,8 +46,8 @@ input:focus {
   border-color:grey; 
   padding:10px;
 }
-
-.searchButton{
+ 
+.searchButton { 
   margin-left: 40px;
   width: 7%;
   border-radius: 10px;
@@ -67,15 +69,15 @@ input:focus {
   /* border-color: black; */
 }
 
-.apply{
+.apply {
   color:white;
 }
 
-.apply:hover{
+.apply:hover {
   color:white;
 }
 
-.pagination{
+.pagination {
   justify-content: center;
   margin-top: 5em;
   margin-bottom: 5em;
