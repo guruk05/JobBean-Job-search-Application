@@ -14,6 +14,7 @@ const App = () => {
    
   const [jobs , setJobs] = useState([]);
   const [search , setSearch] = useState("");
+  const [filterSearch, setFilterSearch] = useState("");
   const [loading, setLoading] = useState(false);
   const [jobsPerPage] = useState(75);
   const [currentPage, setCurrentPage] = useState(1);
@@ -21,7 +22,7 @@ const App = () => {
  
   useEffect(() => {
     getData();
-  },[search]); 
+  },[filterSearch]); 
   
   const getData = async() =>{
     setLoading(true);
@@ -40,6 +41,7 @@ const App = () => {
    e.preventDefault();
    let filteredJobs = jobs.filter(job => job.location === search || job.companyname === search );
    setJobs(filteredJobs);
+   setFilterSearch(search);
   //  console.log(filteredJobs);
    let indexOfFilteredJobs = filteredJobs.length;
   //  console.log(indexOfFilteredJobs); 
