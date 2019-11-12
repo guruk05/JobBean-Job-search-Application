@@ -68,7 +68,7 @@ const App = () => {
         <input className = "search-Form" type ="text" value = {search} onChange = {updateSearch} name="searchJob"/>
         <Button onClick = {getSearch} variant = "outline-secondary" className = "searchButton" >Search</Button>
       </form>
-      {jobs.map(jobData => (
+      {currentJobs.map(jobData => (
          <Job key = {jobData.companyName}
               title = {jobData.title} 
               companyName = {jobData.companyname} 
@@ -79,7 +79,7 @@ const App = () => {
               endDate = {jobData.enddate} 
               apply = {jobData.applylink} />  
       ))}
-      <Pagination className = "pagination" jobsPerPage = {jobsPerPage} 
+      <pagination className = "pagination" jobsPerPage = {jobsPerPage} 
     totalPosts ={jobs.length} 
     paginate = {paginate} />
     </div>
