@@ -79,6 +79,8 @@ const App = () => {
               endDate = {jobData.enddate} 
               apply = {jobData.applylink} />  
       ))}
+      <Pagination className = "pagination" jobsPerPage = {jobsPerPage} 
+    />
     </div>
   );
 }
