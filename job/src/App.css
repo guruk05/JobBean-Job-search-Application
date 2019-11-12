@@ -67,4 +67,8 @@ input:focus {
   border-color: black;
 }
 
+.pagination{
+  justify-content: center;
+}
+
 
