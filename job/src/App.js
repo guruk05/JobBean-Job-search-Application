@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Job from './Jobs';
-import pagination from './pagination';
+import Pagination from './pagination';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
@@ -15,8 +15,8 @@ const App = () => {
   const [jobs , setJobs] = useState([]);
   const [search , setSearch] = useState("");
   const [loading, setLoading] = useState(false);
-  const [jobsPerPage, setJobsPerPage] = useState([75]);
-  const [currentPage, setCurrentPage] = useState([1]);
+  const [jobsPerPage] = useState(10);
+  const [currentPage, setCurrentPage] = useState(1);
  
   useEffect(() => {
     getData();
@@ -79,7 +79,8 @@ const App = () => {
               endDate = {jobData.enddate} 
               apply = {jobData.applylink} />  
       ))}
-      <pagination className = "pagination" jobsPerPage = {jobsPerPage} 
+      <Pagination className = "pagination" 
+      jobsPerPage = {jobsPerPage} 
     totalPosts ={jobs.length} 
     paginate = {paginate} />
     </div>
