@@ -41,6 +41,9 @@ const App = () => {
    console.log(filteredJobs);
  }; 
 
+    const indexOfLastJob = currentPage * jobsPerPage;
+   
+
   return (
     <div className="App">
       <header className="App-header">
