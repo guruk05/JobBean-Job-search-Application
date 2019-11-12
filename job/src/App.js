@@ -13,6 +13,8 @@ const App = () => {
    
   const [jobs , setJobs] = useState([]);
   const [search , setSearch] = useState("");
+  const [loading, setLoading] = useState(false);
+  
  
   useEffect(() => {
     getData();
