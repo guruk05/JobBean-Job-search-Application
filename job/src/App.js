@@ -61,7 +61,7 @@ const App = () => {
 
     <div className="App">
       <header className="App-header">
-        Job Search
+        JobBean
       </header>
       <div className = "searchContext"><h4>Search your dream jobs here</h4></div>
       <form onSubmit = {getSearch} className = "search-Jobs">
