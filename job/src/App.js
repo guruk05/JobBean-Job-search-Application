@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import Job from './Jobs';
 import './App.css';
-import { Button } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'react-bootstrap';
 
 
 
@@ -21,17 +22,18 @@ const App = () => {
   const jobData = await fetch(url);
   const data = await jobData.json();
   setJobs(data.data);
-  // console.log(data);
+  console.log(data);
 }  
 
  const updateSearch = (e) => {
-  setSearch(e.target.value);
+  setSearch(e.target.value);    
 }
 
  const getSearch = (e) => {
    e.preventDefault();
    let filteredJobs = jobs.filter(job => job.location === search || job.companyname === search );
    setJobs(filteredJobs);
+   console.log(filteredJobs);
  }; 
 
   return (
@@ -42,7 +44,7 @@ const App = () => {
       <p>Search Jobs Here</p>
       <form onSubmit = {getSearch} className = "search-Jobs">
         <input className = "search-Form" type ="text" value = {search} onChange = {updateSearch} name="searchJob"/>
-        <Button outline color="secondary">Search</Button>
+        <Button variant = "outline-secondary" className = "searchButton" >Search</Button>
       </form>
       {jobs.map(jobData => (
          <Job key = {jobData.companyName}

@@ -1,18 +1,25 @@
 import React from 'react';
-
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 const Job = ({title, companyName, location, experience, skills, type, endDate, apply}) =>{
     return (
-         <div className = "card">
-            <div className = "title"><h2>{title}</h2> </div> 
-            <div className = "companyName"> <h4>{companyName}</h4></div>
-            <div className = "location"> <p>{location}</p></div>
-            <div className = "experience"> <p>{experience}</p></div>
-            <div className = "skills"> <p>{skills}</p></div>
-            <div className = "type"> <p>{type}</p></div>
-            <div className = "endDate"><p>{endDate}</p></div>
-            <div className = "apply"><p>{apply}</p></div>
-        </div>
+        <Card className="text-left" border = "dark">
+  <Card.Header><h4>{title}</h4></Card.Header>
+  <Card.Body>
+    <Card.Title>{companyName}</Card.Title>
+    <Card.Text>
+      <p>{location}</p>
+      <p>{experience}</p>
+      <p>{skills}</p>
+      <p>{type}</p>
+      <p>{endDate}</p>
+    </Card.Text>
+  </Card.Body>
+  <Card.Footer className="text-muted"><Button variant="primary">{apply}</Button></Card.Footer>
+</Card>         
     )
 };
 
