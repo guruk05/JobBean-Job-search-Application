@@ -12,6 +12,27 @@ In this Application users can view Jobs and search for jobs with respect to Loca
 
 ![JobBean 2](https://user-images.githubusercontent.com/54667515/69914066-db329880-1465-11ea-8e02-e4aa7dad9e06.PNG)
 
+# To run this project locally 
+
+### Clone the project using Git Bash / Command prompt 
+```
+git clone https://github.com/guruk05/JobBean-Job-search-Application.git 
+```
+
+### Navigate inside the directory by:
+```
+cd job
+```
+
+### Install all required packages:
+```
+npm install
+```
+
+### Open your browser at http://localhost:3000/
+
+<br>
+<br>
 
 
 
