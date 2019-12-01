@@ -7,9 +7,10 @@ In this Application users can view Jobs and search for jobs with respect to Loca
 
 # Preview
 
-![jobBean1](https://user-images.githubusercontent.com/54667515/69914003-07014e80-1465-11ea-8795-2eb0d86e14e7.PNG)
+![Jobbean1](https://user-images.githubusercontent.com/54667515/69914065-d79f1180-1465-11ea-8feb-3ed60a2fdfde.PNG)
 
-![jobBean2](https://user-images.githubusercontent.com/54667515/69914024-56477f00-1465-11ea-9a17-0923e80831a5.PNG)
+
+![JobBean 2](https://user-images.githubusercontent.com/54667515/69914066-db329880-1465-11ea-8e02-e4aa7dad9e06.PNG)
 
 
 
