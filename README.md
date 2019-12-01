@@ -18,6 +18,7 @@ In this Application users can view Jobs and search for jobs with respect to Loca
 # To run this project locally 
 
 
+
 ### Clone the project using Git Bash / Command prompt:
 ```
 git clone https://github.com/guruk05/JobBean-Job-search-Application.git 
