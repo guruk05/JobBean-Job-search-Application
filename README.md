@@ -6,6 +6,10 @@ A Job Application developed to practice <a href="https://reactjs.org/"> React </
 
 In this Application users can view Jobs and search for jobs with respect to Location and Skills.
 
+# Technology used
+
+<a href="https://reactjs.org/"> React </a>
+
 # Preview
 
 
