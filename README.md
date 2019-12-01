@@ -15,8 +15,13 @@ In this Application users can view Jobs and search for jobs with respect to Loca
 
 ![Jobbean1](https://user-images.githubusercontent.com/54667515/69914065-d79f1180-1465-11ea-8feb-3ed60a2fdfde.PNG)
 
+#### <i>Home Page<i>
+
 
 ![JobBean 2](https://user-images.githubusercontent.com/54667515/69914066-db329880-1465-11ea-8e02-e4aa7dad9e06.PNG)
+
+#### <i>Search Content<i>
+
 
 
 # To run this project locally 
@@ -49,6 +54,11 @@ npm start
 ### Open your browser at http://localhost:3000/
 
 <br>
+
+# Author 
+
+* #### <a href="https://github.com/guruk05">Guru Prasath</a>
+
 <br>
 
 
