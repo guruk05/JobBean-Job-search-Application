@@ -8,7 +8,7 @@ In this Application users can view Jobs and search for jobs with respect to Loca
 
 # Technology used
 
-<a href="https://reactjs.org/"> React </a>
+* <a href="https://reactjs.org/"> React </a>
 
 # Preview
 
